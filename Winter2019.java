@@ -20,3 +20,23 @@ class Kata {
     return totalSheep;
   }
 }
+
+// 3. Codewars- A Strange Trip to the Market
+// Nessie is a master of disguise but always says the phrase "tree fiddy" (also written as 3.50 or three fifty). 
+// Return "true" if the speaker is Nessie, and "false" if not. 
+
+public class Nessie {
+    public static boolean isLockNessMonster(String s){
+      if(s.contains("tree fiddy") || s.contains("3.50") || s.contains("three fifty")){
+        return true; }
+      else {
+        return false; }
+    }
+}
+// ALSO can do:
+import java.util.regex.Pattern;
+
+public class Nessie {
+    public static boolean isLockNessMonster(String s) {
+        return Pattern.matches(".*(tree fiddy|3\\.50|three fifty).*", s);  }
+}
