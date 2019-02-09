@@ -43,6 +43,10 @@ public class Nessie {
 
 // 4. Codewars- Form the Largest
 // Return The max number that could be formed from the digits of a given number.
+// arrayList will grow as you add more, the memory will increase
+// only real use case for primitave array is for very small apps
+// List can reorder, array can not
+
 
 import java.util.*;
 public class Solution {
