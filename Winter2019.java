@@ -40,3 +40,23 @@ public class Nessie {
     public static boolean isLockNessMonster(String s) {
         return Pattern.matches(".*(tree fiddy|3\\.50|three fifty).*", s);  }
 }
+
+// 4. Codewars- Form the Largest
+// Return The max number that could be formed from the digits of a given number.
+
+import java.util.*;
+public class Solution {
+    public static long maxNumber(long n) {
+        List<Long> nums = new ArrayList<>();
+        while(n > 0) {
+            nums.add(n % 10);
+            n = n / 10;
+        }
+        Collections.sort(nums, Collections.reverseOrder());
+     //   for(Long num : nums){ n = (n * 10) + num }
+        for(int i = 0; i < nums.size(); i++){
+           n = (n * 10) + nums.get(i);
+        }
+        return n;
+    }
+}
