@@ -64,3 +64,53 @@ public class Solution {
         return n;
     }
 }
+
+//5. Move and Vect class- 2/14/19 Java Class
+      // in Move.java
+public class Move {
+ 
+  public static void main(String[] args) {
+   final Vect vect1 = new Vect(2,2); 
+// final doesn't mean values can't change, just means can't assign new object to vect1
+   for(int i = 0; i < 10; i++) {
+     vect1.setX(vect1.getX() + 1);
+     vect1.setY(vect1.getY() + 1);
+   }
+   System.out.println("X : " + vect1.getX() + ", Y : " + vect1.getY());
+  }
+      // in Vect.java
+public class Vect {
+  //create coordinates
+    private Integer x; 
+    private Integer y;
+    
+    public Vect() { 
+      this.x = 0;
+      this.y = 0;
+    }
+    
+    public Vect(Integer x,Integer y) {
+      this.setX(x);
+      this.setY(y);
+    }
+  //since our Integers are PRIVATE, we need a getter/setter
+    // these control the flow of getting a value 
+    public Integer getX() {
+     return x; 
+    }
+
+    public void setX(Integer x) {
+      if (x < 10) {
+       this.x = x; 
+      }
+    }
+    
+    public Integer getY() {
+     return y; 
+    }
+    
+    public void setY(Integer y) {
+     this.y = y; 
+    }
+}
+  
